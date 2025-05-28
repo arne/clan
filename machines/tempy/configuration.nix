@@ -16,8 +16,8 @@
 
   # You can get your disk id by running the following command on the installer:
   # Replace <IP> with the IP of the installer printed on the screen or by running the `ip addr` command.
-  # ssh root@<IP> lsblk --output NAME,ID-LINK,FSTYPE,SIZE,MOUNTPOINT
-  disko.devices.disk.main.device = "/dev/disk/by-id/__CHANGE_ME__";
+  # ssh root@10.10.10.8 lsblk --output NAME,ID-LINK,FSTYPE,SIZE,MOUNTPOINT
+  disko.devices.disk.main.device = "/dev/disk/by-id/ata-ShiJi_256GB_RE000000000000000721";
 
   /*
     After tempo is deployed, uncomment the following line
