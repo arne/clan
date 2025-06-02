@@ -26,6 +26,7 @@ environment.systemPackages =
     beszel
     clang
     corepack_20
+    comma
     docker-compose
     emacs
     eternal-terminal

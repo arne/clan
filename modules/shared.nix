@@ -1,4 +1,4 @@
-{ pkgs, config, clan-core, ... }:
+{ pkgs, config, clan-core, nix-index-database, ... }:
 {
   imports = [
     # Enables the OpenSSH server for remote access
@@ -7,6 +7,11 @@
     clan-core.clanModules.root-password
     clan-core.clanModules.user-password
     clan-core.clanModules.state-version
+
+  ];
+
+  modules = [
+    nix-index-database.nixosModules.nix-index
   ];
 
   # generate a random password for our user below
@@ -15,6 +20,7 @@
 
   users.users.root.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJkHOi39HCigHCOneTKIiY+C809n6d3sNHd3hoy2Uq21 Warden"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJMA+ii3/JAZqgBQCVI5xFOgM6gVsCjuP8PaaXr1bcJ"
   ];
 
   users.users.user = {

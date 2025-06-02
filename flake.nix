@@ -1,22 +1,20 @@
 {
-  inputs.clan-core.url = "https://git.clan.lol/clan/clan-core/archive/main.tar.gz";
-  inputs.nixpkgs.follows = "clan-core/nixpkgs";
+  inputs  = {
+    clan-core.url = "https://git.clan.lol/clan/clan-core/archive/main.tar.gz";
+    nixpkgs.follows = "clan-core/nixpkgs";
+
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+  };
 
   outputs =
-    { self, clan-core, ... }:
+    { self, clan-core, nix-index-database, ... }:
     let
       # Usage see: https://docs.clan.lol
       clan = clan-core.clanLib.buildClan {
         inherit self;
-        # Ensure this is unique among all clans you want to use.
         meta.name = "fismen";
 
-        # All machines in ./machines will be imported.
-
-        # Prerequisite: boot into the installer.
-        # See: https://docs.clan.lol/guides/getting-started/installer
-        # local> mkdir -p ./machines/machine1
-        # local> Edit ./machines/<machine>/configuration.nix to your liking.
         machines = {
           # You can also specify additional machines here.
           # somemachine = {
