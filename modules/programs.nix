@@ -42,6 +42,7 @@ environment.systemPackages =
     jellyfin-ffmpeg
     lazygit
     nixfmt-rfc-style
+    nix-your-shell
     nodejs_20
     python3
     ripgrep
