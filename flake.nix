@@ -12,7 +12,7 @@
     let
       # Usage see: https://docs.clan.lol
       clan = clan-core.clanLib.buildClan {
-        inherit self;
+	inherit self;
         meta.name = "fismen";
 
         machines = {

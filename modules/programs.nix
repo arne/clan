@@ -46,7 +46,7 @@ environment.systemPackages =
     python3
     ripgrep
     ruby
-    thefuck
+    # thefuck
     yt-dlp
     wget
     zellij

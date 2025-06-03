@@ -1,4 +1,4 @@
-{ pkgs, config, clan-core, inputs, ... }:
+{ pkgs, config, clan-core, self, ... }:
 {
   imports = [
     # Enables the OpenSSH server for remote access
@@ -8,8 +8,9 @@
     clan-core.clanModules.user-password
     clan-core.clanModules.state-version
 
-    inputs.nix-index-database.nixosModules.nix-index
+    self.inputs.nix-index-database.nixosModules.nix-index
   ];
+
 
 
   # generate a random password for our user below
@@ -49,6 +50,7 @@
     wheelNeedsPassword = false;
   };
 
+  programs.nix-index-database.comma.enable = true;
   # Locale service discovery and mDNS
   services = {
     avahi.enable = true;

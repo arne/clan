@@ -1,4 +1,4 @@
-{
+_:{
   imports = [
     # contains your disk format and partitioning configuration.
     ../../modules/disko.nix
