@@ -1,4 +1,4 @@
-{ pkgs, config, clan-core, nix-index-database, ... }:
+{ pkgs, config, clan-core, inputs, ... }:
 {
   imports = [
     # Enables the OpenSSH server for remote access
@@ -8,11 +8,9 @@
     clan-core.clanModules.user-password
     clan-core.clanModules.state-version
 
+    inputs.nix-index-database.nixosModules.nix-index
   ];
 
-  modules = [
-    nix-index-database.nixosModules.nix-index
-  ];
 
   # generate a random password for our user below
   # can be read using `clan secrets get <machine-name>-user-password` command
