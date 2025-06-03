@@ -7,7 +7,7 @@
     ../../modules/programs.nix
   ];
 
-  clan.core.networking.targetHost = "root@10.10.10.25";
+  clan.core.networking.targetHost = "root@royset";
 
   # You can get your disk id by running the following command on the installer:
   # Replace <IP> with the IP of the installer printed on the screen or by running the `ip addr` command.
