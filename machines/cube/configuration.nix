@@ -7,8 +7,6 @@ _:{
     ../../modules/programs.nix
   ];
 
-  users.users.user.name = "arne";
-
   clan.core.networking.targetHost = "root@10.10.10.10";
 
   # You can get your disk id by running the following command on the installer:

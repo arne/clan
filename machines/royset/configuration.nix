@@ -7,13 +7,12 @@
     ../../modules/programs.nix
   ];
 
-  users.users.user.name = "arne";
-
-  clan.core.networking.targetHost = "root@10.10.10.10";
+  clan.core.networking.targetHost = "root@10.10.10.25";
 
   # You can get your disk id by running the following command on the installer:
   # Replace <IP> with the IP of the installer printed on the screen or by running the `ip addr` command.
-  # ssh root@10.10.10.25 lsblk --output NAME,ID-LINK,FSTYPE,SIZE,MOUNTPOINT
-  disko.devices.disk.main.device = "/dev/disk/by-id/[enter ID-LINK here]";
+  # ssh root@royset lsblk --output NAME,ID-LINK,FSTYPE,SIZE,MOUNTPOINT
+  disko.devices.disk.main.device = "/dev/disk/by-id/nvme-eui.002538b961b196cf";
 
+  clan.core.networking.zerotier.networkId = builtins.readFile ../../vars/per-machine/cube/zerotier/zerotier-network-id/value;
 }

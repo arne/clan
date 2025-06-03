@@ -15,6 +15,8 @@
 
   # generate a random password for our user below
   # can be read using `clan secrets get <machine-name>-user-password` command
+
+  users.users.user.name = "arne";
   clan.user-password.user = "user";
 
   users.users.root.openssh.authorizedKeys.keys = [
