@@ -22,6 +22,7 @@
   users.users.root.openssh.authorizedKeys.keys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJkHOi39HCigHCOneTKIiY+C809n6d3sNHd3hoy2Uq21 Warden"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGJMA+ii3/JAZqgBQCVI5xFOgM6gVsCjuP8PaaXr1bcJ"
+    "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHb1GcfjCCMlzVsZw5Zku7UvbF3QrFPbP+kxFDU4a+H/9p2HalYD43ZkaJQphQMYqC1MIQd4Cjmg1RTbUTneC+M= apad@arnefismen.com"
   ];
 
   users.users.user = {

@@ -24,6 +24,7 @@ environment.systemPackages =
   [
     bat
     beszel
+    bottom
     clang
     corepack_20
     comma
@@ -31,12 +32,14 @@ environment.systemPackages =
     emacs
     eternal-terminal
     eza
+    fm-go
     fzf
     gcc
     gh
     ghostty
     git
     htop
+    iamb
     jellyfin
     jellyfin-web
     jellyfin-ffmpeg
