@@ -50,6 +50,7 @@ environment.systemPackages =
     python3
     ripgrep
     ruby
+    termscp
     # thefuck
     yt-dlp
     wget

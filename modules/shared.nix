@@ -11,7 +11,7 @@
     self.inputs.nix-index-database.nixosModules.nix-index
   ];
 
-
+  nixpkgs.config.allowUnfree = true;
 
   # generate a random password for our user below
   # can be read using `clan secrets get <machine-name>-user-password` command
