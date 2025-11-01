@@ -54,7 +54,7 @@
   };
 
   programs.nix-index-database.comma.enable = true;
-  # Locale service discovery and mDNS
+
   services = {
     avahi.enable = true;
     tailscale.enable = true;

@@ -10,7 +10,6 @@
   outputs =
     { self, clan-core, nix-index-database, ... }:
     let
-      # Usage see: https://docs.clan.lol
       clan = clan-core.clanLib.buildClan {
 	inherit self;
         meta.name = "fismen";

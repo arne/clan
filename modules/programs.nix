@@ -29,6 +29,7 @@ environment.systemPackages =
     corepack_20
     comma
     docker-compose
+    direnv
     emacs
     eternal-terminal
     eza
@@ -56,6 +57,5 @@ environment.systemPackages =
     wget
     zellij
     zoxide
-    # nodePackages.wrangler
   ];
 }

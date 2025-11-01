@@ -1,8 +1,6 @@
 _:{
   imports = [
-    # contains your disk format and partitioning configuration.
     ../../modules/disko.nix
-    # this file is shared among all machines
     ../../modules/shared.nix
     ../../modules/programs.nix
   ];
@@ -31,6 +29,13 @@ _:{
 
 
   clan.core.networking.targetHost = "root@10.10.10.10";
+
+#  services.immich = {
+#    enable = true;
+#    host = "0.0.0.0";
+#    mediaLocation = "/storage/photos";
+#  };
+
 
   # You can get your disk id by running the following command on the installer:
   # Replace <IP> with the IP of the installer printed on the screen or by running the `ip addr` command.
